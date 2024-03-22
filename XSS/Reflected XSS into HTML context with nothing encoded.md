@@ -1,7 +1,8 @@
+## Question:
 
 ![image](https://github.com/RahulMMenon011/PortSwigger_Labs/assets/140642506/f46d0741-b385-4be8-92dc-53e8708ea040)
 
-### Solution
+## Solution:
 
 The lab has a vulnerable search functionality
 calling the alert function using a script `<script>alert(1)</script>`
