@@ -15,4 +15,5 @@ Modify the filename parameter, giving it the value by ```..%252f..%252f..%252fet
 
 Lab Solved
 
-![Uploading image.png…]()
+![image](https://github.com/Nifalnasar/Portswigger-Labs/assets/141356053/11e1a509-835b-4a6e-b8e0-0eea2bed0785)
+
