@@ -4,16 +4,15 @@
 
 Solution:
 
-You can sometimes bypass this kind of sanitization by URL encoding, or even double URL encoding, the ```../``` characters. This results in ```%2e%2e%2f``` and ```%252e%252e%252f``` respectively. Various non-standard encodings, such as ```..%c0%af``` or ```..%ef%bc%8f```, may also work.
-
 Use Burp Suite to intercept and modify a request that fetches a product image.
 
-![image](https://github.com/Nifalnasar/Portswigger-Labs/assets/141356053/384d0bf6-f8f6-4a54-a372-e7752284c852)
+![image](https://github.com/Nifalnasar/Portswigger-Labs/assets/141356053/afe947a3-22f5-406a-b0ce-adb12de4de7d)
+![image](https://github.com/Nifalnasar/Portswigger-Labs/assets/141356053/f8cd5be6-2f10-4d50-aadc-263330e25630)
 
-Check the http request for the above product and send it to the repeater
+Modify the filename parameter, giving it the value by ```..%252f..%252f..%252fetc/passwd```
 
-![image](https://github.com/Nifalnasar/Portswigger-Labs/assets/141356053/2835bc16-81d4-4c04-8cab-709e7237e5bd)
+![image](https://github.com/Nifalnasar/Portswigger-Labs/assets/141356053/b3048264-f58d-46ab-a987-4c1785415e2c)
 
-Modify the filename parameter, giving it the value:
+Lab Solved
 
-```..%252f..%252f..%252fetc/passwd``` what we did here is double url enconding.
+![Uploading image.png…]()
