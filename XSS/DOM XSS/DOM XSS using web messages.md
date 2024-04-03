@@ -10,4 +10,5 @@ Click on one product and chexk the details through developer tools go to exploit
 
 Lab Solved
 
-![Uploading image.png…]()
+![image](https://github.com/Nifalnasar/Portswigger-Labs/assets/141356053/8d7ef3b1-5985-4d71-878d-c32eb63be9d0)
+
